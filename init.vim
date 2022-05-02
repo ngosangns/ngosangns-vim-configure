@@ -52,6 +52,7 @@ set keymodel=startsel,stopsel " Mapping <Shift>-Arrows to selecting characters/l
 set signcolumn=yes
 set nowrap
 set splitbelow
+set noswapfile
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 " No annoying sound on errors
@@ -60,8 +61,6 @@ set novisualbell
 set t_vb=
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
-" With a map leader it's possible to do extra key combinations
-let mapleader = "\<Space>"
 " When joining lines, don't insert a space between two multi-byte characters
 set formatoptions+=B
 " 1 tab == 4 spaces
@@ -227,10 +226,10 @@ nmap <BS> i<BS>
 nmap <CR> i<CR>
 " Right indent
 call MapBoth('<Tab>', '>>4l')
-vmap <Tab> >gv
+vmap <Tab> >>gv4l
 " Left indent
 call MapBoth('<S-Tab>', '<<4h')
-vmap <S-Tab> <gv
+vmap <S-Tab> <<gv4h
 " GoTo code navigation.
 call MapBoth('<F12>', '<Plug>(coc-definition)')
 " Formatting selected code.

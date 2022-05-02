@@ -16,7 +16,7 @@
     "explorer.file.git.showUntrackedFiles": true,
     "explorer.position": "floating",
     "explorer.keyMappings.global": {
-        "i": false, // cancel default mapkey
+        "i": false, 
         "<c-o>": "noop",
         "*": "toggleSelection",
         "<tab>": "actionMenu",
@@ -34,7 +34,11 @@
           "open"
         ],
         "o": ["wait", "expanded?", "collapse", "expand"],
-        "<cr>": ["wait", "expandable?", ["expanded?", "collapse", "expand"], "open"],
+        "<cr>": [
+          "expandable?",
+          ["expanded?", "collapse", "expand"],
+          "open"
+        ],
         "e": "open",
         "s": "open:split",
         "E": "open:vsplit",
