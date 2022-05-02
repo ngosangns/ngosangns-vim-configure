@@ -199,8 +199,6 @@ call MapBoth('<C-f>', '/')
 call MapBoth('<A-CR>', 'o')
 " Exit tab | window
 call MapBoth('<C-w>', ':q!<CR>')
-" Terminal
-call MapBoth('<C-t>', ':Texplore \| :lcd%:p:h \| :ter<CR>a')
 " Fast jump
 call MapBoth('<C-Up>', '5k')
 call MapBoth('<C-Down>', '5j')
