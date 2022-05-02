@@ -1,0 +1,5 @@
+*
+!.gitignore
+!readme.md
+!coc-settings.json
+!init.vim
