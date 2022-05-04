@@ -140,12 +140,6 @@ set history=1000 " command line history
 if !isdirectory($HOME . "/.vim/swapfiles") | call mkdir($HOME . "/.vim/swapfiles", "p") | endif
 set dir=$HOME/.vim/swapfiles//
 
-" Turn persistent undo on, means that you can undo even when you close a buffer/VIM
-set undofile
-set undolevels=1000
-if !isdirectory($HOME. "/.vim/undotree") | call mkdir($HOME . "/.vim/undotree", "p") | endif
-set undodir=$HOME/.vim/undotree//
-
 " For regular expressions turn magic on
 set magic
 " Ignore case when searching
@@ -228,7 +222,7 @@ nmap <BS> i<BS>
 " Enter
 nmap <CR> i<CR>
 " Right indent
-call MapBoth('<Tab>', '>>')
+nmap <Tab> i<Tab>
 vmap <Tab> >gv
 " Left indent
 call MapBoth('<S-Tab>', '<<')

@@ -3,3 +3,5 @@
 !readme.md
 !coc-settings.json
 !init.vim
+!/screenshots
+!/screenshots/*
