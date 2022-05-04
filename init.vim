@@ -175,6 +175,9 @@ set statusline+=\ [%{getcwd()}] " current dir
 set statusline+=\ [%{&encoding}] " encoding
 set statusline+=%=%-14.(%l/%L,%c%V%)\ %p%% " Right aligned file nav info
 
+" Allow cursor show after last character
+set ve+=onemore
+
 function! MapBoth(keys, rhs)
     execute 'nmap' a:keys a:rhs
     execute 'imap' a:keys '<ESC><ESC>' . a:rhs
@@ -213,8 +216,8 @@ vmap <C-c> ygv
 call MapBoth('<C-x>', 'dd')
 vmap <C-x> d
 " Paste
-call MapBoth('<C-v>', 'gp')
-vmap <C-v> gp
+call MapBoth('<C-v>', 'gP')
+vmap <C-v> gP
 " Select all
 call MapBoth('<C-a>', 'ggVG$')
 " Save
@@ -225,11 +228,11 @@ nmap <BS> i<BS>
 " Enter
 nmap <CR> i<CR>
 " Right indent
-call MapBoth('<Tab>', '>>4l')
-vmap <Tab> >gv4l
+call MapBoth('<Tab>', '>>')
+vmap <Tab> >gv
 " Left indent
-call MapBoth('<S-Tab>', '<<4h')
-vmap <S-Tab> <gv4h
+call MapBoth('<S-Tab>', '<<')
+vmap <S-Tab> <gv
 " GoTo code navigation.
 call MapBoth('<F12>', '<Plug>(coc-definition)')
 " Formatting selected code.
@@ -237,13 +240,20 @@ call MapBoth('<leader>f', '<Plug>(coc-format-selected)')
 " Outline
 call MapBoth('<C-r>', ':CocList outline<cr>')
 " Commentary
-call MapBoth('<C-_>', ':Commentary<CR>')
+call MapBoth('<C-_>', 'gcc')
+vmap <C-_> gcgv
 " FZF
 call MapBoth('<C-p>', ':FZF<CR>')
 " Exit vim
 call MapBoth('<C-d>', ':qa!<CR>')
 " File explorer
 call MapBoth('<C-b>', "<Cmd>CocCommand explorer<CR>")
+
+" Move out of selected text behavior
+vmap <Left> <ESC>`<<Left>
+vmap <Up> <ESC>`<<Up>
+vmap <Right> <ESC>`><Right>
+vmap <Down> <ESC>`><Down>
 
 " Ctrl + P
 let g:ctrlp_custom_ignore = {

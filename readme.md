@@ -22,12 +22,18 @@ Plug 'kyazdani42/nvim-web-devicons'
 sudo apt-get install neovim
 ```
 
-Open Terminal and run following commands:
+Open Terminal and run following commands (these commands will make you lost all your current config of Vim!):
 ```
+# Remove old config
+sudo rm -rf ~/.config/nvim
+# Clone configs from repo to config path of Vim
 git clone https://github.com/ngosangns/ngosangns-vim-configure ~/.config/nvim
+# Install c-tags for outline
 sudo apt-get install universal-ctags
+# Install vim-plug package manager of Vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install NERD fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Go-Mono.zip
 sudo mkdir /usr/share/fonts/nerdfonts
 sudo unzip Go-Mono.zip -d /usr/share/fonts/nerdfonts
@@ -75,7 +81,8 @@ File contents:
 - Search text: `Ctrl + f`
 - Save file: `Ctrl + s`
 
-## Install LSP server for `coc`
+## Install LSP server with `coc`
 ```
 :CocInstall <what-you-want>
+# Restart vim
 ```
