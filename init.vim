@@ -226,10 +226,10 @@ nmap <BS> i<BS>
 nmap <CR> i<CR>
 " Right indent
 call MapBoth('<Tab>', '>>4l')
-vmap <Tab> >>gv4l
+vmap <Tab> >gv4l
 " Left indent
 call MapBoth('<S-Tab>', '<<4h')
-vmap <S-Tab> <<gv4h
+vmap <S-Tab> <gv4h
 " GoTo code navigation.
 call MapBoth('<F12>', '<Plug>(coc-definition)')
 " Formatting selected code.

@@ -17,9 +17,14 @@ Plug 'kyazdani42/nvim-web-devicons'
 ```
 
 ## Setup
-Go to `~/.config/nvim` and run following commands:
+**Required: NeoVim**
 ```
-git clone https://github.com/ngosangns/ngosangns-vim-configure .
+sudo apt-get install neovim
+```
+
+Open Terminal and run following commands:
+```
+git clone https://github.com/ngosangns/ngosangns-vim-configure ~/.config/nvim
 sudo apt-get install universal-ctags
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -37,7 +42,7 @@ Run vim command `:CocInstall coc-html coc-css coc-json coc-tsserver coc-sourceki
 Enjoy!  
 
 ## Key mappings (all mode)
-Exit vim: `Ctrl + d`
+Exit vim: `Ctrl + d`  
 
 Text behavior:
 - Copy: `Ctrl + c`
@@ -48,10 +53,9 @@ Text behavior:
 - Undo: `Ctrl + z`
 - Redo: `Ctrl + y`
 - Select all: `Ctrl + a`
-- Save file: `Ctrl + s`
-- Go to definition: `F12`
 - Backspace: `Backspace`
 - Enter: `Enter`
+- Comment: `Ctrl + /`
 
 Navigation:
 - Fast move: `Ctrl + Arrow`
@@ -59,6 +63,7 @@ Navigation:
 - Close tab: `Ctrl + w`
 - New tab: `Ctrl + n`
 - Go to command mode: `Ctrl + \`
+- Go to definition: `F12`
 
 File explorer:
 - Toggle file explorer: `Ctrl + b`
@@ -68,6 +73,7 @@ File contents:
 - Toggle file outline: `Ctrl + r`
 - Find files: `Ctrl + p`
 - Search text: `Ctrl + f`
+- Save file: `Ctrl + s`
 
 ## Install LSP server for `coc`
 ```
