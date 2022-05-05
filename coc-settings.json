@@ -97,5 +97,6 @@
         "]c": ["wait", "markNext:git"],
         "<<": "gitStage",
         ">>": "gitUnstage"
-      }
+      },
+   "coc.preferences.jumpCommand": "tabe" 
 }
