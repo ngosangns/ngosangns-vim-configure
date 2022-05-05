@@ -210,8 +210,8 @@ vmap <C-c> ygv
 call MapBoth('<C-x>', 'dd')
 vmap <C-x> d
 " Paste
-call MapBoth('<C-v>', 'gP')
-vmap <C-v> gP
+call MapBoth('<C-v>', 'P')
+vmap <C-v> gp
 " Select all
 call MapBoth('<C-a>', 'ggVG$')
 " Save
